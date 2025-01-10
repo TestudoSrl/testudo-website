@@ -1,17 +1,30 @@
-// components/Navbar.js
 "use client"
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from "next/image"
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 200
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled)
+      }
+    }
+
+    document.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrolled])
       // State to track scroll position
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Effect to listen for scroll events
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 200) {
         setIsScrolled(true); // Set to true if user scrolls more than 50px
       } else {
         setIsScrolled(false); // Reset to false when at the top
@@ -30,10 +43,12 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   return (
-    <nav className="sticky top-0 border-b border-white border-opacity-50 text-white p-10 ">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <nav
+    className={`sticky top-0 border-b border-white border-opacity-50 p-10 
+      transition-all duration-500 ease-in-out
+      ${scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'}`}
+  ><div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="/" className="hover:text-gray-400">

@@ -6,7 +6,7 @@ import { BsPlugin } from "react-icons/bs";
 
 const Card = ({ title, Icon, description }) => {
   return (
-    <div className="max-w-sm rounded border-black border-2 border-opacity-10 overflow-hidden  bg-white">
+    <div className="max-w-sm hover:translate-y-[-5px] hover:shadow-xl transition-shadow duration-500 rounded border-black border-2 border-opacity-10 overflow-hidden  bg-white">
         
       <div className="p-4">
 

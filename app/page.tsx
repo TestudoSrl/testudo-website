@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Card from "@/components/card"
@@ -6,8 +7,9 @@ import { FaBook,FaMedal,FaTabletAlt } from "react-icons/fa";
 import { MdOutlineTimeToLeave, MdOutlineTimer } from "react-icons/md";
 import { BsPlugin } from "react-icons/bs";
 
-
 export default function Home() {
+
+
   return (
     
     
@@ -19,8 +21,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
           <Navbar />
-
-          <h1 className="translate-x-[-12rem] p-[20rem] text-7xl text-left font-bold">L'ARTE DEL CODING</h1>
+          <h1  className="translate-x-[-12rem] p-[20rem] text-7xl text-left font-bold">L'ARTE DEL CODING</h1>
           <h3 className="p-20 translate-x-[3rem] translate-y-[-15rem] font-thin text-xl mt-[-8rem]">Sviluppare codice... la nostra passione.... <br />la nostra forza...</h3>
           <button className="p-20 translate-x-[8rem] translate-y-[-19rem] mb-[10rem] border-opacity-50 bg-transparent border-2 border-white text-white px-7 py-2  hover:bg-white hover:text-black transition duration-300">
           CONTATTACI
@@ -84,6 +85,31 @@ export default function Home() {
 
 
       </div>
+
+     
+      <div className="relative w-full h-[500px]">
+
+  <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/attivitaBG.jpg')]"></div>
+  <div className="relative z-10">
+
+  <h1 className=" p-20 font-bold font-sans text-7xl  ">Ultime Attività</h1>
+        <div className="translate-y-[-7rem]  p-20">
+          <p>Guarda le nostre ultime attività svolta in termini di consulenza, sviluppo e prodotti ...</p>
+          <p>Potresti trovare già quello che ti serve.</p>
+          <div className=" translate-x-[50rem] pr-[20rem] translate-y-[-9rem]">
+          <h3 className="text-2xl font-black">UMES</h3>  <p className="font-thin
+          ">UNIFIED MESSAGING ENTERPRISE</p>
+          <p>La nostra soluzione permette l'integrazione  <br />con applicazioni  web based ma anche AS/400 <br />
+           per l'invio di messaggistica FAX, SMS, <br />
+           TELEGRAM</p>
+
+          </div>
+        </div>
+
+  </div>
+</div>
+
+
     </>
     
   );
