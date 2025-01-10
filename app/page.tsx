@@ -1,116 +1,111 @@
-
 import Image from "next/image";
 import Navbar from "@/components/navbar";
-import Card from "@/components/card"
+import Card from "@/components/card";
 import { GrSystem } from "react-icons/gr";
-import { FaBook,FaMedal,FaTabletAlt } from "react-icons/fa";
+import { FaBook, FaMedal, FaTabletAlt } from "react-icons/fa";
 import { MdOutlineTimeToLeave, MdOutlineTimer } from "react-icons/md";
 import { BsPlugin } from "react-icons/bs";
+import SlideInDiv from "@/components/MainSlideAnimation";
 
 export default function Home() {
-
-
   return (
-    
-    
-    
     <>
+      {/* Hero Section with Background Image */}
       <div className="bg-cover bg-center bg-no-repeat bg-[url('/images/bg.jpg')]">
-
-        <div className="relative z-10 text-white ">
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
+        <div className="relative z-10 text-white">
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <Navbar />
-          <h1  className="translate-x-[-12rem] p-[20rem] text-7xl text-left font-bold">L'ARTE DEL CODING</h1>
-          <h3 className="p-20 translate-x-[3rem] translate-y-[-15rem] font-thin text-xl mt-[-8rem]">Sviluppare codice... la nostra passione.... <br />la nostra forza...</h3>
-          <button className="p-20 translate-x-[8rem] translate-y-[-19rem] mb-[10rem] border-opacity-50 bg-transparent border-2 border-white text-white px-7 py-2  hover:bg-white hover:text-black transition duration-300">
-          CONTATTACI
-           </button>
+          <SlideInDiv />
         </div>
-        
-
       </div>
 
-      
-      <div className="flex relative z-10 translate-x-[10rem] text-white p-10">
-
-        <Card 
-        title="BackEnd Development"
-        
-        Icon={GrSystem}
-        description="Scelta delle migliori tecnologie per garantire un sistema di
-        backend a
-        prova di bomba."
+      {/* Cards Section 1 */}
+      <div className="flex flex-wrap justify-center gap-8 p-10 text-white">
+        <Card
+          title="BackEnd Development"
+          Icon={GrSystem}
+          description="Scelta delle migliori tecnologie per garantire un sistema di backend a prova di bomba."
         />
-         <Card 
-        title="FrontEnd Development"
-        
-        Icon={FaTabletAlt}
-        description="Sfoglia la nostra documentazione per capire la facilità di
-        integrazione con i nostri servizi"
+        <Card
+          title="FrontEnd Development"
+          Icon={FaTabletAlt}
+          description="Sfoglia la nostra documentazione per capire la facilità di integrazione con i nostri servizi"
         />
-        <Card 
-        title="Feature Aggiuntive"
-        
-        Icon={FaMedal}
-        description="Da sempre riconosciamo ed evidenziamo l'importanza di una applicazione su misura"
+        <Card
+          title="Feature Aggiuntive"
+          Icon={FaMedal}
+          description="Da sempre riconosciamo ed evidenziamo l'importanza di una applicazione su misura"
         />
- 
-
-
-      </div>
-      <div className="flex relative translate-y-[-6rem] z-10 translate-x-[10rem] text-white p-10">
-
-        <Card 
-        title="Services Documentation"
-        
-        Icon={FaBook}
-        description="Sfoglia la nostra documentazione per capire la facilità di
-        integrazione con i nostri servizi"
-        />
-
-         <Card 
-        title="Fast Delivery"
-        
-        Icon={MdOutlineTimer}
-        description="I tempi di deployment sono per voi importanti? Per noi ancora di piu garantendovi il versioning"
-        />
-        <Card 
-        title="Plugins Gratuiti"
-        
-        Icon={BsPlugin}
-        description="Sfoglia i nostri plugin gratuiti per facilitare l'integrazione nelle vostre applicazioni sulla base delle nostre esperienze"
-        />
- 
-
-
       </div>
 
-     
-      <div className="relative w-full h-[500px]">
+      {/* Cards Section 2 */}
+      <div className="flex flex-wrap justify-center gap-8 p-10 text-white">
+        <Card
+          title="Services Documentation"
+          Icon={FaBook}
+          description="Sfoglia la nostra documentazione per capire la facilità di integrazione con i nostri servizi"
+        />
+        <Card
+          title="Fast Delivery"
+          Icon={MdOutlineTimer}
+          description="I tempi di deployment sono per voi importanti? Per noi ancora di più garantendovi il versioning"
+        />
+        <Card
+          title="Plugins Gratuiti"
+          Icon={BsPlugin}
+          description="Sfoglia i nostri plugin gratuiti per facilitare l'integrazione nelle vostre applicazioni sulla base delle nostre esperienze"
+        />
+      </div>
 
-  <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/attivitaBG.jpg')]"></div>
-  <div className="relative z-10">
+      {/* Activities Section (Improved with Tailwind CSS) */}
+      <div className="relative w-full bg-cover bg-center bg-no-repeat bg-fixed bg-[url('/images/attivitaBG.jpg')] h-[500px]">
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative z-10 text-white px-8 md:px-20 py-20 text-center">
+          <h1 className="text-4xl font-bold leading-tight mb-6">Ultime Attività</h1>
+          <p className="text-lg max-w-2xl mx-auto mb-8">
+            Guarda le nostre ultime attività svolte in consulenza, sviluppo e prodotti. Potresti trovare già quello che ti serve.
+          </p>
 
-  <h1 className=" p-20 font-bold font-sans text-7xl  ">Ultime Attività</h1>
-        <div className="translate-y-[-7rem]  p-20">
-          <p>Guarda le nostre ultime attività svolta in termini di consulenza, sviluppo e prodotti ...</p>
-          <p>Potresti trovare già quello che ti serve.</p>
-          <div className=" translate-x-[50rem] pr-[20rem] translate-y-[-9rem]">
-          <h3 className="text-2xl font-black">UMES</h3>  <p className="font-thin
-          ">UNIFIED MESSAGING ENTERPRISE</p>
-          <p>La nostra soluzione permette l'integrazione  <br />con applicazioni  web based ma anche AS/400 <br />
-           per l'invio di messaggistica FAX, SMS, <br />
-           TELEGRAM</p>
+          {/* Activity Cards Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            {/* Activity Card 1 */}
+            <div className="relative bg-white text-black rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orange-400 p-6">
+              <div className="flex justify-center items-center text-4xl text-orange-500 mb-4">
+                <MdOutlineTimeToLeave />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">UMES</h3>
+              <p className="text-sm font-light text-gray-700 mb-4">UNIFIED MESSAGING ENTERPRISE</p>
+              <p className="text-sm text-gray-600">
+                La nostra soluzione permette l'integrazione con applicazioni web-based, ma anche AS/400 per l'invio di messaggistica FAX, SMS, e TELEGRAM.
+              </p>
+            </div>
 
+            {/* Activity Card 2 */}
+            <div className="relative bg-white text-black rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orange-400 p-6">
+              <div className="flex justify-center items-center text-4xl text-orange-500 mb-4">
+                <FaTabletAlt />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Angular FrontEnd Development</h3>
+              <p className="text-sm font-light text-gray-700 mb-4">DEVELOPMENT</p>
+              <p className="text-sm text-gray-600">
+                Le nostre risorse sono state impegnate nello sviluppo della componente front-end di una applicazione di gestione reportistica e statistiche del processo di vendita.
+              </p>
+            </div>
+
+            {/* Activity Card 3 */}
+            <div className="relative bg-white text-black rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orange-400 p-6">
+              <div className="flex justify-center items-center text-4xl text-orange-500 mb-4">
+                <MdOutlineTimer />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">UMES Bidirezionale</h3>
+              <p className="text-sm font-light text-gray-700 mb-4">INTEGRATION</p>
+              <p className="text-sm text-gray-600">
+                La gestione dei messaggi inbound tramite canali social come Telegram consente di ottimizzare i processi aziendali in tempi molto stretti, migliorando l'efficienza.
+              </p>
+            </div>
           </div>
         </div>
-
-  </div>
-</div>
-
-
+      </div>
     </>
-    
   );
 }
