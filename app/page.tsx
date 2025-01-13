@@ -6,6 +6,8 @@ import { FaBook, FaMedal, FaTabletAlt } from "react-icons/fa";
 import { MdOutlineTimeToLeave, MdOutlineTimer } from "react-icons/md";
 import { BsPlugin } from "react-icons/bs";
 import SlideInDiv from "@/components/MainSlideAnimation";
+import Footer from "@/components/footer"
+
 
 export default function Home() {
   return (
@@ -188,7 +190,7 @@ export default function Home() {
 </div>
 
 </div>
-
+    <Footer/>
     </>
   );
 }

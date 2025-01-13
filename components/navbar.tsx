@@ -27,8 +27,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 border-b border-white border-opacity-50 p-10
-        transition-all duration-500 ease-in-out
+      className={`sticky top-0 z-50 w-full border-b border-white border-opacity-50 p-10
+        transition-all duration-300 ease-in-out
         ${scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
