@@ -106,6 +106,89 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="px-[18rem] py-12">
+  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight transform transition-transform duration-300 ease-in-out">
+    Partner
+  </h1>
+  
+  <p className="text-xl text-opacity-30 translate-x-[-162px] text-thin text-gray-800 leading-relaxed md:text-xl md:leading-relaxed max-w-3xl mx-auto">
+  Gestione di Clienti Enterprise o piccole/medie imprese sono per noi all'ordine del giorno 
+
+  </p>
+  <br />
+  <br />
+  <div className="flex space-x-4">
+  {/* Kofax Image */}
+  <div className="relative group">
+    <img
+      src="/images/kofax.jpeg"
+      style={{ height: "300px", width: "auto" }}
+      width="600"
+      alt=""
+      className="transition duration-300 ease-in-out"
+    />
+    {/* Hover Overlay */}
+    <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
+    {/* Hover Text (with fade from bottom to top effect) */}
+    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+      <span className="text-white text-xl font-bold">Kofax</span>
+    </div>
+  </div>
+
+  {/* NBD Image */}
+  <div className="relative group">
+    <img
+      src="/images/NBD.jpeg"
+      style={{ height: "300px", width: "300px" }}
+      alt=""
+      className="transition duration-300 ease-in-out translate-x-[-20px]"
+    />
+    {/* Hover Overlay */}
+    <div className="absolute inset-0 bg-orange-500 opacity-0 translate-x-[-20px] group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
+    {/* Hover Text (with fade from bottom to top effect) */}
+    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+      <span className="text-white text-xl font-bold">NBD</span>
+    </div>
+  </div>
+</div>
+
+<div className="flex space-x-4">
+  {/* Kub Image */}
+  <div className="relative group">
+    <img
+      src="/images/kub.jpeg"
+      className="transition duration-300 ease-in-out"
+      style={{ height: "250px", width: "auto" }}
+      alt=""
+    />
+    {/* Hover Overlay */}
+    <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
+    {/* Hover Text (with fade from bottom to top effect) */}
+    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+      <span className="text-white text-xl font-bold">Kub</span>
+    </div>
+  </div>
+
+  {/* Angular Image */}
+  <div className="relative group">
+    <img
+      src="/images/angular.jpeg"
+      className="transition duration-300 ease-in-out"
+      style={{ height: "250px", width: "353px" }}
+      alt=""
+    />
+    {/* Hover Overlay */}
+    <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
+    {/* Hover Text (with fade from bottom to top effect) */}
+    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+      <span className="text-white text-xl font-bold">Angular</span>
+    </div>
+  </div>
+</div>
+
+</div>
+
     </>
   );
 }
