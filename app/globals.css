@@ -20,19 +20,8 @@ body {
 }
 
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Slide from the right */
-@keyframes slideInFromRight {
+/* Keyframes for sliding text in from the right */
+@keyframes slide-in-right {
   0% {
     transform: translateX(100%);
     opacity: 0;
@@ -43,26 +32,8 @@ body {
   }
 }
 
-/* Slide from the top */
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* Add the animation utility class */
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out forwards;
 }
 
-/* Slide from the bottom */
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
