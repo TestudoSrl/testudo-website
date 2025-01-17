@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // Track the navbar visibility on page load
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,15 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
+  useEffect(() => {
+    // Set the navbar to become visible after the page loads (useEffect runs after render)
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Small delay to allow for initial page load
+
+    return () => clearTimeout(timer); // Clean up on component unmount
+  }, []);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -28,8 +38,9 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-50 w-full border-b border-white border-opacity-50 p-10
-        transition-all duration-300 ease-in-out
-        ${scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'}`}
+        transition-all duration-500 ease-in-out
+        ${scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'}
+        transform ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -49,15 +60,6 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-10 text-s font-bold">
           <li className="group">
             <Link
-              href="/"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              SOLUZIONI
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li className="group">
-            <Link
               href="/contact"
               className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
             >
@@ -65,7 +67,6 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </li>
-   
           <li className="group">
             <Link
               href="/about"
@@ -77,7 +78,7 @@ const Navbar = () => {
           </li>
           <li className="group">
             <Link
-              href="/contact"
+              href="/consulenza"
               className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
             >
               CONSULENZA
@@ -89,7 +90,7 @@ const Navbar = () => {
               href="/portfolio"
               className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
             >
-              PORTOFOLIO
+              PORTFOLIO
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </li>
@@ -128,7 +129,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-gray-800 text-white p-4`}
+        className={`md:hidden bg-gray-800 text-white p-4 transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <ul className="space-y-4">
           <li>
