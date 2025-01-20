@@ -96,6 +96,15 @@ const Navbar = () => {
           </li>
           <li className="group">
             <Link
+              href="/soluzioni"
+              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
+            >
+              SOLUZIONI
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
+            </Link>
+          </li>
+          <li className="group">
+            <Link
               href="/careers"
               className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
             >

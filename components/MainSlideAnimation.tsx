@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'  // Import Link component from Next.js
 
 export default function SlideInDiv() {
   const [isVisible, setIsVisible] = useState(false)
@@ -23,13 +24,16 @@ export default function SlideInDiv() {
           Sviluppare codice... la nostra passione.... <br />la nostra forza...
         </h3>
 
-        <button
-          className="p-20 translate-x-[8rem] translate-y-[-19rem] mb-[10rem] border-2 border-white text-white px-7 py-2 
+        {/* Wrap the button with a Link component */}
+        <Link href="/contact">
+          <button
+            className="p-20 translate-x-[8rem] translate-y-[-19rem] mb-[10rem] border-2 border-white text-white px-7 py-2 
             bg-transparent hover:bg-orange-500 hover:text-black 
             hover:scale-110 transition-all duration-300 ease-in-out"
-        >
-          CONTATTACI
-        </button>
+          >
+            CONTATTACI
+          </button>
+        </Link>
       </div>
     </div>
   )

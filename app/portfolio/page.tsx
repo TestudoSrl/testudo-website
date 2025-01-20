@@ -133,7 +133,7 @@ export default function Contact() {
 
         {/* Right Card */}
         <div className="bg-white p-5 w-1/4 h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg mb-4"></h2>
+          <h2 className="text-black font-bold text-lg mb-4">SOCIAL - € 0,03 / messaggio</h2>
           <p className="text-gray-600 text-sm mb-4">
           Messaggistica di tipo professional con ricevuta di consegna</p>
           <ul className="text-gray-600 list-disc pl-5 space-y-2">

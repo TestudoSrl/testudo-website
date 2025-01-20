@@ -15,24 +15,25 @@ export default function Contact() {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 text-white px-8 md:px-20 py-20 text-center">
             {/* Title */}
-            <h1 className="text-7xl font-bold leading-tight mb-6 animate-slide-in-right">
+            <h1 className="text-7xl font-bold leading-tight mb-6 animate__animated animate__fadeIn animate__delay-1s">
               CONTATTI
             </h1>
+
             {/* Description */}
-            <p className="text-lg max-w-2xl mx-auto mb-8 animate-slide-in-right animation-delay-200">
+            <p className="text-lg max-w-2xl mx-auto mb-8 animate__animated animate__fadeIn animate__delay-2s">
               Per qualsiasi esigenza contattateci oppure prenotate un incontro in una delle nostre sedi
             </p>
 
             {/* Contact Information Cards */}
             <div className="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Phone Number Card */}
-              <div className="bg-white text-black rounded-lg shadow-lg overflow-hidden animate-slide-in-right animation-delay-400">
+              <div className="bg-white text-black rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:translate-x-2 animate__animated animate__fadeIn animate__delay-3s">
                 <div className="bg-orange-500 text-white p-4">
                   <h3 className="text-xl font-semibold">Milano</h3>
                 </div>
                 <div className="p-6">
                   <p className="text-lg text-left">
-                    <a href="tel:+390230568001" className="">
+                    <a href="tel:+390230568001" className="hover:text-orange-500">
                       Via Picco, 31 <br />
                       20132 Milano (MI) <br />
                       P.IVA: 10520950964 <br />
@@ -45,7 +46,7 @@ export default function Contact() {
               </div>
 
               {/* Street Name Card */}
-              <div className="bg-white text-black rounded-lg shadow-lg overflow-hidden animate-slide-in-right animation-delay-600">
+              <div className="bg-white text-black rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:translate-x-2 animate__animated animate__fadeIn animate__delay-4s">
                 <div className="bg-orange-500 text-white p-4">
                   <h3 className="text-xl font-semibold">Cavenago B.za</h3>
                 </div>
@@ -60,13 +61,13 @@ export default function Contact() {
               </div>
 
               {/* Email Card */}
-              <div className="bg-white text-black rounded-lg shadow-lg overflow-hidden animate-slide-in-right animation-delay-800">
+              <div className="bg-white text-black rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:translate-x-2 animate__animated animate__fadeIn animate__delay-5s">
                 <div className="bg-orange-500 text-white p-4">
                   <h3 className="text-xl font-semibold">Colturano</h3>
                 </div>
                 <div className="p-6">
                   <p className="text-lg text-left">
-                    <a href="mailto:info@tuaazienda.com" className="">
+                    <a href="mailto:info@tuaazienda.com" className="hover:text-orange-500">
                       SP 39 della Cerca - km 2 <br />
                       20060 - Colturano (MI) <br />
                       <p className="text-orange-500 hover:underline">+39 02 3056 8001</p>
