@@ -14,15 +14,11 @@ export default function Contact() {
         <div className="relative z-10 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-        <Navbar />
 
-        {/* Main Content Section */}
-        <div
-          className={`relative w-full bg-cover bg-center bg-no-repeat min-h-screen pt-[60px] transition-all duration-300 ${
-            isMenuOpen ? 'pt-[260px]' : 'pt-[60px]' // Add more padding when the mobile menu is open
-          }`}
-        >
+
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <Navbar />
+
           <div className="relative z-10 text-white px-6 md:px-12 lg:px-20 py-16 text-center">
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate__animated animate__fadeIn animate__delay-1s">
@@ -95,7 +91,6 @@ export default function Contact() {
           </div>
           <Footer />
         </div>
-      </div>
     </>
   );
 }
