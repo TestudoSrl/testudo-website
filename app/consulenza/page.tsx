@@ -10,11 +10,12 @@ export default function Contact() {
         <div className="relative z-10 text-white">
           {/* Navbar Sticky */}
           <div className="sticky top-0 z-50 bg-black bg-opacity-50">
-            <Navbar />
           </div>
         </div>
 
         <div className="relative w-full bg-cover bg-center bg-no-repeat">
+        <Navbar />
+
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 text-white px-6 md:px-12 py-12 text-center">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-4 animate-slide-in-right">

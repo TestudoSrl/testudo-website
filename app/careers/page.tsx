@@ -16,12 +16,15 @@ export default function Careers() {
         <div className="relative z-10 text-white">
           {/* Navbar Sticky */}
           <div className="sticky top-0 z-50 bg-black bg-opacity-50">
-            <Navbar />
           </div>
         </div>
 
+
         <div className="relative w-full bg-cover bg-center bg-no-repeat">
+
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <Navbar />
+
           <div className="relative z-10 text-white px-8 md:px-20 py-20 text-center">
             <h1 className="text-7xl font-bold leading-tight mb-6 animate-slide-in-right">
               LAVORA CON NOI

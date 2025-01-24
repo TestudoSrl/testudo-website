@@ -10,12 +10,13 @@ export default function Contact() {
         <div className="relative z-10 text-white">
           {/* Navbar Sticky */}
           <div className="sticky top-0 z-50 bg-black bg-opacity-50">
-            <Navbar />
           </div>
         </div>
 
         <div className="relative w-full bg-cover bg-center bg-no-repeat">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <Navbar />
+
           <div className="relative z-10 text-white px-8 md:px-20 py-20 text-center">
             <h1 className="text-7xl font-bold leading-tight mb-6 animate-slide-in-right">
               NOI POSSIAMO
@@ -103,12 +104,13 @@ export default function Contact() {
       </div>
 
       {/* New Section: Rectangular Cards (3 cards) */}
-      <div className="min-h-[300px] flex justify-center gap-0 mt-12">
+      <div className="min-h-[300px] flex flex-col sm:flex-row sm:gap-6 justify-center mt-12">
         {/* Left Card */}
-        <div className="bg-white p-6 w-1/4 h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-white p-6 sm:w-1/4 w-full h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
           <h2 className="text-black font-bold text-lg mb-4">SMS - € 0,06 / messaggio</h2>
           <p className="text-gray-600 text-sm mb-4">
-          Messaggistica di tipo professional con ricevuta di consegna</p>
+            Messaggistica di tipo professional con ricevuta di consegna
+          </p>
           <ul className="text-gray-600 list-disc pl-5 space-y-2">
             <li>1.000.0000+ richieste / minuto</li>
             <li>140+ paesi destinatari</li>
@@ -117,13 +119,13 @@ export default function Contact() {
         </div>
 
         {/* Middle Card (Taller - Adjusted on both top and bottom) */}
-        <div className="bg-white p-6 w-1/4 h-[400px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-white p-6 sm:w-1/4 w-full h-[400px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
           <h2 className="text-black font-bold text-lg flex items-center justify-between mb-4">
-          FAX - € 0,05 / pagina
+            FAX - € 0,05 / pagina
           </h2>
           <p className="text-gray-600 text-sm mb-4">
-          Messaggistica di tipo professional con ricevuta di consegna</p>
- 
+            Messaggistica di tipo professional con ricevuta di consegna
+          </p>
           <ul className="text-gray-600 list-disc pl-5 space-y-2">
             <li>100+ canali fax disponibili</li>
             <li>possibilità di utilizzo cover/utente</li>
@@ -132,14 +134,15 @@ export default function Contact() {
         </div>
 
         {/* Right Card */}
-        <div className="bg-white p-5 w-1/4 h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-white p-5 sm:w-1/4 w-full h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
           <h2 className="text-black font-bold text-lg mb-4">SOCIAL - € 0,03 / messaggio</h2>
           <p className="text-gray-600 text-sm mb-4">
-          Messaggistica di tipo professional con ricevuta di consegna</p>
+            Messaggistica di tipo professional con ricevuta di consegna
+          </p>
           <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>100.000+ richieste / minuteo</li>
+            <li>100.000+ richieste / minuto</li>
             <li>Gestione Inbound</li>
-            <li>Untenti illimitati</li>
+            <li>Utenti illimitati</li>
           </ul>
         </div>
       </div>

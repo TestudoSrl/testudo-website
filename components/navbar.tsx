@@ -6,41 +6,49 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // Track the navbar visibility on page load
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
 
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 200;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(isScrolled);
     };
 
     document.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       document.removeEventListener('scroll', handleScroll);
     };
-  }, [scrolled]);
-
-  useEffect(() => {
-    // Set the navbar to become visible after the page loads (useEffect runs after render)
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 100); // Small delay to allow for initial page load
-
-    return () => clearTimeout(timer); // Clean up on component unmount
   }, []);
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const menuItems = [
+    { label: 'CONTATTACI', href: '/contact' },
+    { label: 'EXPERTISE', href: '/about' },
+    { label: 'CONSULENZA', href: '/consulenza' },
+    { label: 'PORTFOLIO', href: '/portfolio' },
+    { label: 'SOLUZIONI', href: '/soluzioni' },
+    { label: 'LAVORA CON NOI', href: '/careers' },
+  ];
+
+  useEffect(() => {
+    // Prevent scrolling on mobile when menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; // Reset overflow when component unmounts
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav
-      className={`sticky top-0 z-50 w-full border-b border-white border-opacity-50 p-10
+      className={`sticky top-0 z-50 w-full border-b border-white border-opacity-50 p-4 sm:p-6 md:p-10
         transition-all duration-500 ease-in-out
-        ${scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'}
-        transform ${isVisible ? 'translate-x-0' : 'translate-x-full'}`}
+        ${scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -57,61 +65,18 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-10 text-s font-bold">
-          <li className="group">
-            <Link
-              href="/contact"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              CONTATTACI
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li className="group">
-            <Link
-              href="/about"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              EXPERTISE
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li className="group">
-            <Link
-              href="/consulenza"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              CONSULENZA
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li className="group">
-            <Link
-              href="/portfolio"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              PORTFOLIO
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li className="group">
-            <Link
-              href="/soluzioni"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              SOLUZIONI
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li className="group">
-            <Link
-              href="/careers"
-              className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
-            >
-              LAVORA CON NOI
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
+        <ul className="hidden md:flex space-x-8 text-lg font-semibold">
+          {menuItems.map((item) => (
+            <li key={item.label} className="group">
+              <Link
+                href={item.href}
+                className={`relative transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'} hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110`}
+              >
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Menu Button */}
@@ -136,36 +101,45 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu Overlay (Dimmed Background) */}
+      {isMenuOpen && (
+        <div
+          onClick={() => setIsMenuOpen(false)} // Close menu when clicking outside
+          className="fixed inset-0 bg-black opacity-70 z-30" // Dimmed background
+        />
+      )}
+
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-gray-800 text-white p-4 transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`md:hidden bg-gray-800 text-white p-6 transition-all duration-300 ease-in-out transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } fixed inset-0 z-40`}
+        style={{
+          maxWidth: '100vw',
+          overflowX: 'hidden', // Prevent horizontal scrolling
+        }}
       >
-        <ul className="space-y-4">
-          <li>
-            <Link href="/" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link href="/portfolio" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>
-              PORTOFOLIO
-            </Link>
-          </li>
-          <li>
-            <Link href="/careers" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>
-              LAVORA CON NOI
-            </Link>
-          </li>
+        {/* Close Button (X) */}
+        <button
+          onClick={toggleMenu}
+          className="absolute top-4 right-4 text-white text-3xl"
+        >
+          &times;
+        </button>
+
+        <ul className="space-y-4 mt-10">
+          {menuItems.map((item) => (
+            <li key={item.label}>
+              <Link
+                href={item.href}
+                className="relative transition-all duration-300 hover:text-orange-400 group-hover:text-orange-400 transform group-hover:scale-110"
+                onClick={() => setIsMenuOpen(false)} // Close menu when an item is clicked
+              >
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
