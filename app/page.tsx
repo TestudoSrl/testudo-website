@@ -6,8 +6,7 @@ import { FaBook, FaMedal, FaTabletAlt } from "react-icons/fa";
 import { MdOutlineTimeToLeave, MdOutlineTimer } from "react-icons/md";
 import { BsPlugin } from "react-icons/bs";
 import SlideInDiv from "@/components/MainSlideAnimation";
-import Footer from "@/components/footer"
-
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -22,7 +21,7 @@ export default function Home() {
       </div>
 
       {/* Cards Section 1 */}
-      <div className="flex flex-wrap justify-center gap-8 p-10 text-white">
+      <div className="flex flex-wrap justify-center gap-8 p-6 md:p-10 text-white">
         <Card
           title="BackEnd Development"
           Icon={GrSystem}
@@ -41,7 +40,7 @@ export default function Home() {
       </div>
 
       {/* Cards Section 2 */}
-      <div className="flex flex-wrap justify-center gap-8 p-10 text-white">
+      <div className="flex flex-wrap justify-center gap-8 p-6 md:p-10 text-white">
         <Card
           title="Services Documentation"
           Icon={FaBook}
@@ -59,48 +58,45 @@ export default function Home() {
         />
       </div>
 
-      {/* Activities Section (Improved with Tailwind CSS) */}
-      <div className="relative w-full bg-cover bg-center bg-no-repeat bg-fixed bg-[url('/images/attivitaBG.jpg')] h-[500px]">
+      {/* Activities Section */}
+      <div className="relative w-full bg-cover bg-fixed bg-[url('/images/attivitaBG.jpg')] h-auto py-20">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 text-white px-8 md:px-20 py-20 text-center">
-          <h1 className="text-4xl font-bold leading-tight mb-6">Ultime Attività</h1>
-          <p className="text-lg max-w-2xl mx-auto mb-8">
+        <div className="relative z-10 text-white px-4 md:px-20 py-10 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-6">Ultime Attività</h1>
+          <p className="text-sm sm:text-lg max-w-2xl mx-auto mb-8">
             Guarda le nostre ultime attività svolte in consulenza, sviluppo e prodotti. Potresti trovare già quello che ti serve.
           </p>
 
           {/* Activity Cards Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {/* Activity Card 1 */}
-            <div className="relative bg-white text-black rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orange-400 p-6">
-              <div className="flex justify-center items-center text-4xl text-orange-500 mb-4">
+            <div className="bg-white text-black rounded-lg shadow-xl p-6 transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-orange-400">
+              <div className="flex justify-center items-center text-3xl text-orange-500 mb-4">
                 <MdOutlineTimeToLeave />
               </div>
-              <h3 className="text-xl font-semibold mb-2">UMES</h3>
-              <p className="text-sm font-light text-gray-700 mb-4">UNIFIED MESSAGING ENTERPRISE</p>
+              <h3 className="text-lg font-semibold mb-2">UMES</h3>
               <p className="text-sm text-gray-600">
                 La nostra soluzione permette l'integrazione con applicazioni web-based, ma anche AS/400 per l'invio di messaggistica FAX, SMS, e TELEGRAM.
               </p>
             </div>
 
             {/* Activity Card 2 */}
-            <div className="relative bg-white text-black rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orange-400 p-6">
-              <div className="flex justify-center items-center text-4xl text-orange-500 mb-4">
+            <div className="bg-white text-black rounded-lg shadow-xl p-6 transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-orange-400">
+              <div className="flex justify-center items-center text-3xl text-orange-500 mb-4">
                 <FaTabletAlt />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Angular FrontEnd Development</h3>
-              <p className="text-sm font-light text-gray-700 mb-4">DEVELOPMENT</p>
+              <h3 className="text-lg font-semibold mb-2">Angular FrontEnd Development</h3>
               <p className="text-sm text-gray-600">
                 Le nostre risorse sono state impegnate nello sviluppo della componente front-end di una applicazione di gestione reportistica e statistiche del processo di vendita.
               </p>
             </div>
 
             {/* Activity Card 3 */}
-            <div className="relative bg-white text-black rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orange-400 p-6">
-              <div className="flex justify-center items-center text-4xl text-orange-500 mb-4">
+            <div className="bg-white text-black rounded-lg shadow-xl p-6 transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-orange-400">
+              <div className="flex justify-center items-center text-3xl text-orange-500 mb-4">
                 <MdOutlineTimer />
               </div>
-              <h3 className="text-xl font-semibold mb-2">UMES Bidirezionale</h3>
-              <p className="text-sm font-light text-gray-700 mb-4">INTEGRATION</p>
+              <h3 className="text-lg font-semibold mb-2">UMES Bidirezionale</h3>
               <p className="text-sm text-gray-600">
                 La gestione dei messaggi inbound tramite canali social come Telegram consente di ottimizzare i processi aziendali in tempi molto stretti, migliorando l'efficienza.
               </p>
@@ -109,88 +105,31 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-[18rem] py-12">
-  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight transform transition-transform duration-300 ease-in-out">
-    Partner
-  </h1>
-  
-  <p className="text-xl text-opacity-30 translate-x-[-162px] text-thin text-gray-800 leading-relaxed md:text-xl md:leading-relaxed max-w-3xl mx-auto">
-  Gestione di Clienti Enterprise o piccole/medie imprese sono per noi all'ordine del giorno 
+      {/* Partners Section */}
+      <div className="mt-20 px-4 md:px-20 py-12">
+        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Partner</h1>
+        <p className="text-base md:text-lg text-gray-800 leading-relaxed max-w-3xl mx-auto mb-8">
+          Gestione di Clienti Enterprise o piccole/medie imprese sono per noi all'ordine del giorno.
+        </p>
 
-  </p>
-  <br />
-  <br />
-  <div className="flex space-x-4">
-  {/* Kofax Image */}
-  <div className="relative group">
-    <img
-      src="/images/kofax.jpeg"
-      style={{ height: "300px", width: "auto" }}
-      width="600"
-      alt=""
-      className="transition duration-300 ease-in-out"
-    />
-    {/* Hover Overlay */}
-    <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
-    {/* Hover Text (with fade from bottom to top effect) */}
-    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
-      <span className="text-white text-xl font-bold">Kofax</span>
-    </div>
-  </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {["kofax", "NBD", "kub", "angular"].map((partner) => (
+            <div className="relative group" key={partner}>
+              <img
+                src={`/images/${partner}.jpeg`}
+                className="w-full h-48 object-contain transition duration-300 ease-in-out"
+                alt={partner}
+              />
+              <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                <span className="text-white text-lg font-bold capitalize">{partner}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-  {/* NBD Image */}
-  <div className="relative group">
-    <img
-      src="/images/NBD.jpeg"
-      style={{ height: "300px", width: "300px" }}
-      alt=""
-      className="transition duration-300 ease-in-out translate-x-[-20px]"
-    />
-    {/* Hover Overlay */}
-    <div className="absolute inset-0 bg-orange-500 opacity-0 translate-x-[-20px] group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
-    {/* Hover Text (with fade from bottom to top effect) */}
-    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
-      <span className="text-white text-xl font-bold">NBD</span>
-    </div>
-  </div>
-</div>
-
-<div className="flex space-x-4">
-  {/* Kub Image */}
-  <div className="relative group">
-    <img
-      src="/images/kub.jpeg"
-      className="transition duration-300 ease-in-out"
-      style={{ height: "250px", width: "auto" }}
-      alt=""
-    />
-    {/* Hover Overlay */}
-    <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
-    {/* Hover Text (with fade from bottom to top effect) */}
-    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
-      <span className="text-white text-xl font-bold">Kub</span>
-    </div>
-  </div>
-
-  {/* Angular Image */}
-  <div className="relative group">
-    <img
-      src="/images/angular.jpeg"
-      className="transition duration-300 ease-in-out"
-      style={{ height: "250px", width: "353px" }}
-      alt=""
-    />
-    {/* Hover Overlay */}
-    <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></div>
-    {/* Hover Text (with fade from bottom to top effect) */}
-    <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
-      <span className="text-white text-xl font-bold">Angular</span>
-    </div>
-  </div>
-</div>
-
-</div>
-    <Footer/>
+      <Footer />
     </>
   );
 }
