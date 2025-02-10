@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section with Background Image */}
-      <div className="bg-cover bg-center bg-no-repeat bg-[url('/images/bg.jpg')]">
+      <div className="bg-cover bg-center bg-no-repeat bg-[url('/images/bg.jpg')] overflow-hidden">
         <div className="relative z-10 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <Navbar />
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       {/* Cards Section 1 */}
-      <div className="flex flex-wrap justify-center gap-8 p-6 md:p-10 text-white">
+      <div className="flex flex-wrap justify-center gap-8 p-6 md:p-10 text-white max-w-full overflow-hidden">
         <Card
           title="BackEnd Development"
           Icon={GrSystem}
@@ -40,7 +40,7 @@ export default function Home() {
       </div>
 
       {/* Cards Section 2 */}
-      <div className="flex flex-wrap justify-center gap-8 p-6 md:p-10 text-white">
+      <div className="flex flex-wrap justify-center gap-8 p-6 md:p-10 text-white max-w-full overflow-hidden">
         <Card
           title="Services Documentation"
           Icon={FaBook}
@@ -67,9 +67,7 @@ export default function Home() {
             Guarda le nostre ultime attività svolte in consulenza, sviluppo e prodotti. Potresti trovare già quello che ti serve.
           </p>
 
-          {/* Activity Cards Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {/* Activity Card 1 */}
             <div className="bg-white text-black rounded-lg shadow-xl p-6 transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-orange-400">
               <div className="flex justify-center items-center text-3xl text-orange-500 mb-4">
                 <MdOutlineTimeToLeave />
@@ -79,8 +77,6 @@ export default function Home() {
                 La nostra soluzione permette l'integrazione con applicazioni web-based, ma anche AS/400 per l'invio di messaggistica FAX, SMS, e TELEGRAM.
               </p>
             </div>
-
-            {/* Activity Card 2 */}
             <div className="bg-white text-black rounded-lg shadow-xl p-6 transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-orange-400">
               <div className="flex justify-center items-center text-3xl text-orange-500 mb-4">
                 <FaTabletAlt />
@@ -90,8 +86,6 @@ export default function Home() {
                 Le nostre risorse sono state impegnate nello sviluppo della componente front-end di una applicazione di gestione reportistica e statistiche del processo di vendita.
               </p>
             </div>
-
-            {/* Activity Card 3 */}
             <div className="bg-white text-black rounded-lg shadow-xl p-6 transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-orange-400">
               <div className="flex justify-center items-center text-3xl text-orange-500 mb-4">
                 <MdOutlineTimer />
