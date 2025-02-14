@@ -5,26 +5,24 @@ import { FaBook, FaCode, FaServicestack, FaMedal, FaTabletAlt, FaAndroid, FaAppS
 import { MdOutlineTimeToLeave, MdOutlineTimer, MdOutlineQueryStats } from "react-icons/md";
 import { BsPlugin } from "react-icons/bs";
 import { GrTest } from "react-icons/gr";
-
 import Footer from "@/components/footer";
 
 export default function Careers() {
   return (
     <>
-      {/* Job Positions Section */}
-      <div className="bg-cover bg-center bg-no-repeat bg-[url('/images/attivitaBG.jpg')]">
-        <div className="relative z-10 text-white">
-          {/* Navbar Sticky */}
-          <div className="sticky top-0 z-50 bg-black bg-opacity-50">
-          </div>
-        </div>
-
-
-        <div className="relative w-full bg-cover bg-center bg-no-repeat">
-
+      {/* Ensure no horizontal overflow */}
+      <div className="w-full overflow-hidden">
+        {/* Job Positions Section */}
+        <div className="relative w-full bg-cover bg-center bg-no-repeat bg-[url('/images/attivitaBG.jpg')]">
+          {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          <Navbar />
+          
+          {/* Navbar */}
+          <div className="sticky top-0 z-50 bg-black bg-opacity-50 w-full">
+            <Navbar />
+          </div>
 
+          {/* Main Content */}
           <div className="relative z-10 text-white px-8 md:px-20 py-20 text-center">
             <h1 className="text-7xl font-bold leading-tight mb-6 animate-slide-in-right">
               LAVORA CON NOI
@@ -33,6 +31,7 @@ export default function Careers() {
               Scopri le posizioni aperte e unisciti a un team altamente qualificato per lavorare a un progetto complesso e sfidante.
               Direttamente da casa tua.
             </p>
+
             {/* Career Intro Section */}
             <div className="text-center max-w-3xl mx-auto px-6 py-12">
               <h2 className="text-4xl font-bold mb-6 animate-slide-in-right animation-delay-400">
@@ -56,6 +55,8 @@ export default function Careers() {
               </p>
             </div>
           </div>
+
+          {/* Footer */}
           <Footer />
         </div>
       </div>

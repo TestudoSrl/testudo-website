@@ -18,7 +18,7 @@ export default function SlideInDiv() {
       `}
     >
       <div>
-        <h1 className="translate-x-[-12rem] p-[20rem] text-7xl text-left font-bold">L'ARTE DEL CODING</h1>
+        <h1 className="translate-x-[-12rem] p-[20rem] text-6xl text-left font-bold">L'ARTE DEL CODING</h1>
         
         <h3 className="p-20 translate-x-[3rem] translate-y-[-15rem] font-thin text-xl mt-[-8rem]">
           Sviluppare codice... la nostra passione.... <br />la nostra forza...

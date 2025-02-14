@@ -1,16 +1,14 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { FaMedal } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* Competencies Section */}
       <div className="bg-cover bg-center bg-no-repeat bg-[url('/images/attivitaBG.jpg')]">
         <div className="relative z-10 text-white">
           {/* Navbar Sticky */}
-          <div className="absolute sticky top-0 z-50 bg-black bg-opacity-50">
-          </div>
+          <div className="sticky top-0 z-50 bg-black bg-opacity-50"></div>
         </div>
 
         <div className="relative w-full bg-cover bg-center bg-no-repeat">
@@ -28,95 +26,92 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* New Section: Rectangular Cards (3 cards) */}
-      <div className="min-h-[300px] flex flex-wrap justify-center gap-6 mt-12 px-4">
-        {/* Left Card */}
-        <div className="bg-white p-6 w-full md:w-1/4 h-[300px] md:h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg mb-4">GESTIONE ORDINI</h2>
-          <p className="text-gray-600 text-sm mb-4">
-            La multicanalità non ci spaventa, email, fax, edi, sms e social come acquisizione documentale ed estrazione dati per la gestione completa del processo, liberando energie e preziose risorse per l'azienda.
-          </p>
-          <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>Identificazione di 2500+ clienti</li>
-            <li>Gestione di 100+ prodotti</li>
-            <li>10-15 utenti validatori</li>
-          </ul>
-        </div>
-
-        {/* Middle Card (Taller - Adjusted on both top and bottom) */}
-        <div className="bg-white p-6 w-full md:w-1/4 h-[400px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg flex items-center justify-between mb-4">
-            GESTIONE CICLO PASSIVO
-          </h2>
-          <p className="text-gray-600 text-sm mb-4">
-            L'automazione delle fatture è uno dei primi miglioramenti che un'azienda in fase di consolidamento e crescita intraprende. Automatizzare il ciclo passivo significa ridurre i costi e aumentare l'efficienza.
-          </p>
-          <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>Identificazione 850+ fornitori</li>
-            <li>Gestione 5+ currencies</li>
-            <li>15-20 utenti validatori</li>
-          </ul>
-        </div>
-
-        {/* Right Card */}
-        <div className="bg-white p-5 w-full md:w-1/4 h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg mb-4">MESSAGGISTICA MASSIVA</h2>
-          <p className="text-gray-600 text-sm mb-4">
-            Umes è un gatway di messagistica multicanale (SMS, Telegram, WhatsApp*, Facebook Messenger*) di livello enterprise. Sarete sempre più vicini alle esigenze dei vostri clienti.
-          </p>
-          <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>1.000.000+ richieste/minuto</li>
-            <li>Scelta automatica del canale appropriato</li>
-            <li>Potenzia il tuo messaggio</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Second Row of Cards */}
-      <div className="min-h-[300px] flex flex-wrap justify-center gap-6 mt-12 px-4">
-        {/* Left Card */}
-        <div className="bg-white p-6 w-full md:w-1/4 h-[300px] md:h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg mb-4">ERP SPARKLE</h2>
-          <p className="text-gray-600 text-sm mb-4">
-            Sparkle è la soluzione che ti consente di monitorare tutte le attività di magazzino, logistica e trasporti.
-          </p>
-          <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>Sistema multi azienda</li>
-            <li>Gestione di 900+ mezzi</li>
-            <li>50 utenti web</li>
-          </ul>
-        </div>
-
-        {/* Middle Card (Taller - Adjusted on both top and bottom) */}
-        <div className="bg-white p-6 w-full md:w-1/4 h-[400px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg flex items-center justify-between mb-4">
-            MOBILE A/R
-          </h2>
-          <p className="text-gray-600 text-sm mb-4">
-            Scopri come la gestione delle raccomandate possa essere semplice e puntuale con livelli di tracciabilità elevati.
-          </p>
-          <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>200 buste/giorno</li>
-            <li>Gestione firma raccomandata</li>
-            <li>Ricerca full text</li>
-          </ul>
-        </div>
-
-        {/* Right Card */}
-        <div className="bg-white p-5 w-full md:w-1/4 h-[300px] flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-black font-bold text-lg mb-4">SHIPMENT TRACKER</h2>
-          <p className="text-gray-600 text-sm mb-4">
-            TST (Testudo Shipment Tracker) permette di geolocalizzare le consegne della vostra azienda di logistica.
-          </p>
-          <ul className="text-gray-600 list-disc pl-5 space-y-2">
-            <li>Tracciamento live dei mezzi</li>
-            <li>3000+ consegne/giorno</li>
-            <li>Notifica ritardi consegne in tempo reale</li>
-          </ul>
-        </div>
+      {/* Cards Section */}
+      <div className="min-h-[300px] flex flex-wrap justify-center gap-6 mt-12 px-4 w-full max-w-[1200px] mx-auto">
+        {[
+          {
+            title: "GESTIONE ORDINI",
+            description:
+              "La multicanalità non ci spaventa, email, fax, edi, sms e social come acquisizione documentale ed estrazione dati per la gestione completa del processo, liberando energie e preziose risorse per l'azienda.",
+            points: [
+              "Identificazione di 2500+ clienti",
+              "Gestione di 100+ prodotti",
+              "10-15 utenti validatori",
+            ],
+            height: "h-[300px]",
+          },
+          {
+            title: "GESTIONE CICLO PASSIVO",
+            description:
+              "L'automazione delle fatture è uno dei primi miglioramenti che un'azienda in fase di consolidamento e crescita intraprende. Automatizzare il ciclo passivo significa ridurre i costi e aumentare l'efficienza.",
+            points: [
+              "Identificazione 850+ fornitori",
+              "Gestione 5+ currencies",
+              "15-20 utenti validatori",
+            ],
+            height: "h-[400px]",
+          },
+          {
+            title: "MESSAGGISTICA MASSIVA",
+            description:
+              "Umes è un gateway di messaggistica multicanale (SMS, Telegram, WhatsApp*, Facebook Messenger*) di livello enterprise. Sarete sempre più vicini alle esigenze dei vostri clienti.",
+            points: [
+              "1.000.000+ richieste/minuto",
+              "Scelta automatica del canale appropriato",
+              "Potenzia il tuo messaggio",
+            ],
+            height: "h-[300px]",
+          },
+          {
+            title: "ERP SPARKLE",
+            description:
+              "Sparkle è la soluzione che ti consente di monitorare tutte le attività di magazzino, logistica e trasporti.",
+            points: [
+              "Sistema multi azienda",
+              "Gestione di 900+ mezzi",
+              "50 utenti web",
+            ],
+            height: "h-[300px]",
+          },
+          {
+            title: "MOBILE A/R",
+            description:
+              "Scopri come la gestione delle raccomandate possa essere semplice e puntuale con livelli di tracciabilità elevati.",
+            points: [
+              "200 buste/giorno",
+              "Gestione firma raccomandata",
+              "Ricerca full text",
+            ],
+            height: "h-[400px]",
+          },
+          {
+            title: "SHIPMENT TRACKER",
+            description:
+              "TST (Testudo Shipment Tracker) permette di geolocalizzare le consegne della vostra azienda di logistica.",
+            points: [
+              "Tracciamento live dei mezzi",
+              "3000+ consegne/giorno",
+              "Notifica ritardi consegne in tempo reale",
+            ],
+            height: "h-[300px]",
+          },
+        ].map((card, index) => (
+          <div
+            key={index}
+            className={`bg-white p-6 w-full md:w-1/4 ${card.height} flex flex-col justify-between rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl`}
+          >
+            <h2 className="text-black font-bold text-lg mb-4">{card.title}</h2>
+            <p className="text-gray-600 text-sm mb-4">{card.description}</p>
+            <ul className="text-gray-600 list-disc pl-5 space-y-2">
+              {card.points.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }

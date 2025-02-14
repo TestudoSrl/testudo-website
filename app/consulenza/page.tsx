@@ -4,21 +4,20 @@ import { FaMedal } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* Competencies Section */}
       <div className="bg-cover bg-center bg-no-repeat bg-[url('/images/attivitaBG.jpg')]">
         <div className="relative z-10 text-white">
           {/* Navbar Sticky */}
-          <div className="sticky top-0 z-50 bg-black bg-opacity-50">
-          </div>
+          <div className="sticky top-0 z-50 bg-black bg-opacity-50"></div>
         </div>
 
         <div className="relative w-full bg-cover bg-center bg-no-repeat">
-        <Navbar />
+          <Navbar />
 
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 text-white px-6 md:px-12 py-12 text-center">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-4 animate-slide-in-right">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold leading-tight mb-4 animate-slide-in-right">
               TRASFORMAZIONE <br /> DIGITALE
             </h1>
             <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-6 animate-slide-in-right animation-delay-200">
@@ -80,48 +79,49 @@ export default function Contact() {
         <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6">IL NOSTRO TEAM</h1>
       </div>
 
-{/* Team Members Cards Section */}
-<div className="min-h-[40vh] flex items-center justify-center pb-8">
-  <div className="w-full max-w-7xl p-3">
-    {/* Card Grid Layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
-      {/* Card 1 */}
-      <div className="bg-white p-5 rounded-lg flex flex-col transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-        <h2 className="text-xl font-bold text-black text-left mb-3">
-          Luana Girolamo
-          <span className="block text-sm text-gray-400 mt-1">CEO</span> {/* Role added with lower opacity */}
-        </h2>
-        <p className="text-gray-600 text-sm sm:text-base">
-          Come gestire una azienda mettendo in evidenza e risaltando le capacità delle singole risorse
-        </p>
+      {/* Team Members Cards Section */}
+      <div className="min-h-[40vh] flex items-center justify-center pb-8">
+        <div className="w-full max-w-7xl p-3">
+          {/* Card Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
+            {/* Card 1 */}
+            <div className="bg-white p-5 rounded-lg flex flex-col transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
+              <h2 className="text-xl font-bold text-black text-left mb-3">
+                Luana Girolamo
+                <span className="block text-sm text-gray-400 mt-1">CEO</span> {/* Role added with lower opacity */}
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">
+                Come gestire una azienda mettendo in evidenza e risaltando le capacità delle singole risorse
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-5 rounded-lg flex flex-col transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
+              <h2 className="text-xl font-bold text-black text-left mb-3">
+                Fulvio Cazzanti
+                <span className="block text-sm text-gray-400 mt-1">SOFTWARE ARCHITECT</span> {/* Role added with lower opacity */}
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">
+                La pluriennale esperienza in ambito applicativo e la continua voglia di "conoscere" nuove soluzioni sono le nostre fondamenta
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white p-5 rounded-lg flex flex-col transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
+              <h2 className="text-xl font-bold text-black text-left mb-3">
+                Andrea Lugo
+                <span className="block text-sm text-gray-400 mt-1">BUSINESS DEVELOPMENT</span> {/* Role added with lower opacity */}
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">
+                Aggregare le conoscenze e anticipare gli andamenti del mercato con la massima reattività possibile
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Card 2 */}
-      <div className="bg-white p-5 rounded-lg flex flex-col transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-        <h2 className="text-xl font-bold text-black text-left mb-3">
-          Fulvio Cazzanti
-          <span className="block text-sm text-gray-400 mt-1">SOFTWARE ARCHITECT</span> {/* Role added with lower opacity */}
-        </h2>
-        <p className="text-gray-600 text-sm sm:text-base">
-          La pluriennale esperienza in ambito applicativo e la continua voglia di "conoscere" nuove soluzioni sono le nostre fondamenta
-        </p>
-      </div>
-
-      {/* Card 3 */}
-      <div className="bg-white p-5 rounded-lg flex flex-col transition-all duration-300 hover:bg-orange-500 hover:scale-105 hover:shadow-xl">
-        <h2 className="text-xl font-bold text-black text-left mb-3">
-          Andrea Lugo
-          <span className="block text-sm text-gray-400 mt-1">BUSINESS DEVELOPMENT</span> {/* Role added with lower opacity */}
-        </h2>
-        <p className="text-gray-600 text-sm sm:text-base">
-          Aggregare le conoscenze e anticipare gli andamenti del mercato con la massima reattività possibile
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
       {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 }
